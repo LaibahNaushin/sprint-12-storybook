@@ -1,0 +1,88 @@
+.storybook-theme {
+  min-height: 100%;
+  padding: 40px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.storybook-theme--light {
+  --component-bg: #ffffff;
+  --component-text: #111827;
+  --component-border: #d1d5db;
+  --component-muted: #6b7280;
+  --component-surface: #f3f4f6;
+}
+
+.storybook-theme--dark {
+  --component-bg: #111827;
+  --component-text: #f9fafb;
+  --component-border: #374151;
+  --component-muted: #9ca3af;
+  --component-surface: #1f2937;
+}
+
+.ui-button {
+  border: none;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ui-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.ui-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ui-button--primary {
+  background: var(--component-text);
+  color: var(--component-bg);
+}
+
+.ui-button--secondary {
+  background: var(--component-bg);
+  color: var(--component-text);
+  border: 1px solid var(--component-border);
+}
+
+.ui-button--secondary:hover:not(:disabled) {
+  background: var(--component-surface);
+}
+
+.ui-button--danger {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.ui-button--danger:hover:not(:disabled) {
+  background: #b91c1c;
+}
+
+.ui-button--small {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.ui-button--medium {
+  padding: 11px 20px;
+  font-size: 14px;
+}
+
+.ui-button--large {
+  padding: 14px 26px;
+  font-size: 16px;
+}
+
+.ui-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
